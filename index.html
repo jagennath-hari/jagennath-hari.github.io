@@ -51,53 +51,38 @@
               </td>
             </tr>
           </tbody></table>
-    <table style="width:100%;border:0px;border-spacing:0px 20px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
 
-      <tr style="height: 180px;" onmouseover="SpatialFusion_start()" onmouseout="SpatialFusion_stop()">
-        <td style="padding: 0; width: 20%; height: 100%;">
-          <div style="position: relative; width: 100%; height: 100%;">
-            <!-- Video Layer -->
-            <video id="SpatialFusion_video" muted autoplay loop playsinline
-                   style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                          object-fit: fill; display: block; z-index: 0;">
-              <source src="images/SpatialFusion.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-      
-            <!-- Image Layer -->
-            <img id="SpatialFusion_image" src="images/SpatialFusion.jpg"
-                 style="position: absolute; top: 0px; left: 0; width: 100%; height: 180px;
-                        object-fit: fill; display: block; z-index: 1;">
+      <tr onmouseout="SpatialFusion_stop()" onmouseover="SpatialFusion_start()" >
+        <td style="padding:16px;width:20%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='SpatialFusion_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/SpatialFusion.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/SpatialFusion.jpg' width="160" height="90" style="padding-top:35px;">
           </div>
-      
           <script type="text/javascript">
             function SpatialFusion_start() {
-              const video = document.getElementById('SpatialFusion_video');
-              document.getElementById('SpatialFusion_image').style.opacity = "0";
-              video.style.opacity = "1";
-            }
-      
-            function SpatialFusion_stop() {
-              const video = document.getElementById('SpatialFusion_video');
-              video.style.opacity = "0";
-              video.currentTime = 0;
               document.getElementById('SpatialFusion_image').style.opacity = "1";
             }
-      
-            SpatialFusion_stop();
+    
+            function SpatialFusion_stop() {
+              document.getElementById('SpatialFusion_image').style.opacity = "0";
+            }
+            SpatialFusion_stop()
           </script>
         </td>
-      
-        <td style="padding: 8px; width: 80%; vertical-align: middle;">
+        <td style="padding:8px;width:80%;vertical-align:middle">
           <a href="https://github.com/jagennath-hari/SpatialFusion-LM">
-            <span class="papertitle">SpatialFusion-LM: Foundational Vision Meets SpatialLM</span>
+        <span class="papertitle"> SpatialFusion-LM: Foundational Vision Meets SpatialLM </span>
           </a>
           <br>
           <strong>J. Hari</strong>
           <br>
-          <em>Github</em>, 2025 &nbsp;
+          <em>Github</em>, 2025 &nbsp
           <br>
           <a href="https://github.com/jagennath-hari/SpatialFusion-LM">Project Page</a>
           <p></p>
@@ -109,108 +94,78 @@
 
 
 
-      <tr style="height: 180px;" onmouseover="CUDATracking_start()" onmouseout="CUDATracking_stop()">
-        <td style="padding: 0; width: 20%; height: 100%;">
-          <div style="position: relative; width: 100%; height: 100%;">
-            <!-- Video Layer -->
-            <video id="CUDATracking_video" muted autoplay loop playsinline
-                   style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                          object-fit: fill; display: block; z-index: 0;">
-              <source src="images/CUDATracking.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-      
-            <!-- Image Layer -->
-            <img id="CUDATracking_image" src="images/CUDATracking.png"
-                 style="position: absolute; top: -70px; left: 0; width: 100%; height: 320px;
-                        object-fit: fill; display: block; z-index: 1;">
-          </div>
-      
-          <script type="text/javascript">
-            function CUDATracking_start() {
-              const video = document.getElementById('CUDATracking_video');
-              document.getElementById('CUDATracking_image').style.opacity = "0";
-              video.style.opacity = "1";
-            }
-      
-            function CUDATracking_stop() {
-              const video = document.getElementById('CUDATracking_video');
-              video.style.opacity = "0";
-              video.currentTime = 0; // Reset video on hover out
-              document.getElementById('CUDATracking_image').style.opacity = "1";
-            }
-      
-            CUDATracking_stop();
-          </script>
-        </td>
-      
-        <td style="padding: 8px; width: 80%; vertical-align: middle;">
-          <a href="https://github.com/jagennath-hari/Edge-Optimized-Tracking-System">
-            <span class="papertitle">Edge Optimized Tracking System</span>
-          </a>
-          <br>
-          <strong>J. Hari</strong>
-          <br>
-          <em>Github</em>, 2024 &nbsp;
-          <br>
-          <a href="https://github.com/jagennath-hari/Edge-Optimized-Tracking-System">Project Page</a>
-          <p></p>
-          <p>
-            The Edge Optimized Tracking System is a real-time object tracking pipeline that combines deep learning, tracking algorithms, and filtering techniques to accurately detect and follow objects. Designed for high-speed applications, it ensures efficient and reliable performance on edge devices.
-          </p>
-        </td>
-      </tr>
-
-
-    <tr style="height: 180px;" onmouseover="FloorPlanActiveLocalization_start()" onmouseout="FloorPlanActiveLocalization_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="FloorPlanActiveLocalization_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/FloorPlanActiveLocalization.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="FloorPlanActiveLocalization_image" src="images/FloorPlanActiveLocalization.png"
-               style="position: absolute; top: -70px; left: 0; width: 100%; height: 320px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="CUDATracking_stop()" onmouseover="CUDATracking_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='CUDATracking_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/CUDATracking.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/CUDATracking.png' width="160">
         </div>
-    
         <script type="text/javascript">
-          function FloorPlanActiveLocalization_start() {
-            const video = document.getElementById('FloorPlanActiveLocalization_video');
-            document.getElementById('FloorPlanActiveLocalization_image').style.opacity = "0";
-            video.style.opacity = "1";
+          function CUDATracking_start() {
+            document.getElementById('CUDATracking_image').style.opacity = "1";
           }
-    
-          function FloorPlanActiveLocalization_stop() {
-            const video = document.getElementById('FloorPlanActiveLocalization_video');
-            video.style.opacity = "0";
-            video.currentTime = 0; // Reset to first frame
-            document.getElementById('FloorPlanActiveLocalization_image').style.opacity = "1";
+  
+          function CUDATracking_stop() {
+            document.getElementById('CUDATracking_image').style.opacity = "0";
           }
-    
-          FloorPlanActiveLocalization_stop();
+          CUDATracking_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
-        <a href="https://raktimgg.github.io/FloorPlanActiveLocalization.io/">
-          <span class="papertitle">Floor Plan Based Active Global Localization and Navigation Aid for Persons With Blindness and Low Vision</span>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://github.com/jagennath-hari/Edge-Optimized-Tracking-System">
+      <span class="papertitle"> Edge Optimized Tracking System </span>
         </a>
         <br>
-        <a href="https://raktimgg.github.io/my-website/">R. G. Goswami</a>,
-        <a href="https://www.linkedin.com/in/harshitsinha08/">H. Sinha</a>,
-        <a href="https://github.com/venkataPalacherla">P. V. Amith</a>,
-        <strong>J. Hari</strong>,
-        <a href="https://engineering.nyu.edu/faculty/prashanth-krishnamurthy">P. Krishnamurthy</a>,
+        <strong>J. Hari</strong>
+        <br>
+        <em>Github</em>, 2024 &nbsp
+        <br>
+        <a href="https://github.com/jagennath-hari/Edge-Optimized-Tracking-System">Project Page</a>
+        <p></p>
+        <p>
+          The Edge Optimized Tracking System is a real-time object tracking pipeline that combines deep learning, tracking algorithms, and filtering techniques to accurately detect and follow objects. Designed for high-speed applications, it ensures efficient and reliable performance on edge devices.
+        </p>
+      </td>
+    </tr>
+
+
+    <tr onmouseout="FloorPlanActiveLocalization_stop()" onmouseover="FloorPlanActiveLocalization_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='FloorPlanActiveLocalization_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/FloorPlanActiveLocalization.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/FloorPlanActiveLocalization.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function FloorPlanActiveLocalization_start() {
+            document.getElementById('FloorPlanActiveLocalization_image').style.opacity = "1";
+          }
+
+          function FloorPlanActiveLocalization_stop() {
+            document.getElementById('FloorPlanActiveLocalization_image').style.opacity = "0";
+          }
+          FloorPlanActiveLocalization_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://raktimgg.github.io/FloorPlanActiveLocalization.io/">
+			<span class="papertitle">Floor Plan Based Active Global Localization and Navigation Aid for Persons With Blindness and Low Vision</span>
+        </a>
+        <br>
+				<a href="https://raktimgg.github.io/my-website/">R. G. Goswami</a>,
+				<a href="https://www.linkedin.com/in/harshitsinha08/">H. Sinha</a>,
+				<a href="https://github.com/venkataPalacherla">P. V. Amith</a>,
+				<strong>J. Hari</strong>,
+				<a href="https://engineering.nyu.edu/faculty/prashanth-krishnamurthy">P. Krishnamurthy</a>,
         <a href="https://med.nyu.edu/faculty/johnross-rizzo">J. Rizzo</a>,
         <a href="https://engineering.nyu.edu/faculty/farshad-khorrami">F. Khorrami</a>
         <br>
-        <em>IEEE Robotics and Automation Letters</em>, 2024 &nbsp;
+        <em>IEEE Robotics and Automation Letters</em>, 2024 &nbsp
         <br>
         <a href="https://raktimgg.github.io/FloorPlanActiveLocalization.io/">Project Page</a>
         /
@@ -226,49 +181,34 @@
 
 
 
-    <tr style="height: 180px;" onmouseover="RGBD3DGSSLAM_start()" onmouseout="RGBD3DGSSLAM_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="RGBD3DGSSLAM_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/RGBD3DGSSLAM.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="RGBD3DGSSLAM_image" src="images/RGBD3DGSSLAM.png"
-               style="position: absolute; top: -70px; left: 0; width: 100%; height: 320px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="RGBD3DGSSLAM_stop()" onmouseover="RGBD3DGSSLAM_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='RGBD3DGSSLAM_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/RGBD3DGSSLAM.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/RGBD3DGSSLAM.png' width="160">
         </div>
-    
         <script type="text/javascript">
           function RGBD3DGSSLAM_start() {
-            const video = document.getElementById('RGBD3DGSSLAM_video');
-            document.getElementById('RGBD3DGSSLAM_image').style.opacity = "0";
-            video.style.opacity = "1";
-          }
-    
-          function RGBD3DGSSLAM_stop() {
-            const video = document.getElementById('RGBD3DGSSLAM_video');
-            video.style.opacity = "0";
-            video.currentTime = 0; // reset to start
             document.getElementById('RGBD3DGSSLAM_image').style.opacity = "1";
           }
-    
-          RGBD3DGSSLAM_stop();
+  
+          function RGBD3DGSSLAM_stop() {
+            document.getElementById('RGBD3DGSSLAM_image').style.opacity = "0";
+          }
+          RGBD3DGSSLAM_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://github.com/jagennath-hari/RGBD-3DGS-SLAM">
-          <span class="papertitle">RGBD-3DGS-SLAM</span>
+      <span class="papertitle"> RGBD-3DGS-SLAM </span>
         </a>
         <br>
         <strong>J. Hari</strong>
         <br>
-        <em>Github</em>, 2024 &nbsp;
+        <em>Github</em>, 2024 &nbsp
         <br>
         <a href="https://github.com/jagennath-hari/RGBD-3DGS-SLAM">Project Page</a>
         <p></p>
@@ -280,47 +220,34 @@
     
 
 
-    <tr style="height: 180px;" onmouseover="CUDAOdom_start()" onmouseout="CUDAOdom_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="CUDAOdom_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/CUDAOdom.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="CUDAOdom_image" src="images/CUDAOdom.png"
-               style="position: absolute; top: -20px; left: 0; width: 100%; height: 220px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="CUDAOdom_stop()" onmouseover="CUDAOdom_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='CUDAOdom_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/CUDAOdom.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/CUDAOdom.png' width="160">
         </div>
-    
         <script type="text/javascript">
           function CUDAOdom_start() {
-            document.getElementById('CUDAOdom_video').style.opacity = "1";
-            document.getElementById('CUDAOdom_image').style.opacity = "0";
-          }
-    
-          function CUDAOdom_stop() {
-            document.getElementById('CUDAOdom_video').style.opacity = "0";
-            document.getElementById('CUDAOdom_video').currentTime = 0;
             document.getElementById('CUDAOdom_image').style.opacity = "1";
           }
-    
-          CUDAOdom_stop();
+  
+          function CUDAOdom_stop() {
+            document.getElementById('CUDAOdom_image').style.opacity = "0";
+          }
+          CUDAOdom_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://github.com/jagennath-hari/CUDA-Accelerated-Visual-Inertial-Odometry-Fusion">
-          <span class="papertitle">CUDA Accelerated Visual Inertial Odometry Fusion</span>
+      <span class="papertitle"> CUDA Accelerated Visual Inertial Odometry Fusion </span>
         </a>
         <br>
         <strong>J. Hari</strong>
         <br>
-        <em>Github</em>, 2024 &nbsp;
+        <em>Github</em>, 2024 &nbsp
         <br>
         <a href="https://github.com/jagennath-hari/CUDA-Accelerated-Visual-Inertial-Odometry-Fusion">Project Page</a>
         <p></p>
@@ -330,47 +257,34 @@
       </td>
     </tr>
 
-    <tr style="height: 180px;" onmouseover="DepthStreamAccelerator_start()" onmouseout="DepthStreamAccelerator_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="DepthStreamAccelerator_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/DepthStreamAccelerator.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="DepthStreamAccelerator_image" src="images/DepthStreamAccelerator.png"
-               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="DepthStreamAccelerator_stop()" onmouseover="DepthStreamAccelerator_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='DepthStreamAccelerator_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/DepthStreamAccelerator.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/DepthStreamAccelerator.png' width="160" height="90" style="padding-top:35px;">
         </div>
-    
         <script type="text/javascript">
           function DepthStreamAccelerator_start() {
-            document.getElementById('DepthStreamAccelerator_video').style.opacity = "1";
-            document.getElementById('DepthStreamAccelerator_image').style.opacity = "0";
-          }
-    
-          function DepthStreamAccelerator_stop() {
-            document.getElementById('DepthStreamAccelerator_video').style.opacity = "0";
-            document.getElementById('DepthStreamAccelerator_video').currentTime = "0";
             document.getElementById('DepthStreamAccelerator_image').style.opacity = "1";
           }
-    
-          DepthStreamAccelerator_stop();
+  
+          function DepthStreamAccelerator_stop() {
+            document.getElementById('DepthStreamAccelerator_image').style.opacity = "0";
+          }
+          DepthStreamAccelerator_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://github.com/jagennath-hari/DepthStream-Accelerator-ROS2-Integrated-Monocular-Depth-Inference">
-          <span class="papertitle">DepthStream Accelerator</span>
+      <span class="papertitle"> DepthStream Accelerator </span>
         </a>
         <br>
         <strong>J. Hari</strong>
         <br>
-        <em>Github</em>, 2023 &nbsp;
+        <em>Github</em>, 2023 &nbsp
         <br>
         <a href="https://github.com/jagennath-hari/DepthStream-Accelerator-ROS2-Integrated-Monocular-Depth-Inference">Project Page</a>
         <p></p>
@@ -380,47 +294,34 @@
       </td>
     </tr>
 
-    <tr style="height: 180px;" onmouseover="FusionSLAM_start()" onmouseout="FusionSLAM_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="FusionSLAM_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/FusionSLAM.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="FusionSLAM_image" src="images/FusionSLAM.png"
-               style="position: absolute; top: 0px; left: 0; width: 100%; height: 180px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="FusionSLAM_stop()" onmouseover="FusionSLAM_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='FusionSLAM_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/FusionSLAM.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/FusionSLAM.png' width="160" height="95" style="padding-top:35px;">
         </div>
-    
         <script type="text/javascript">
           function FusionSLAM_start() {
-            document.getElementById('FusionSLAM_video').style.opacity = "1";
-            document.getElementById('FusionSLAM_image').style.opacity = "0";
-          }
-    
-          function FusionSLAM_stop() {
-            document.getElementById('FusionSLAM_video').style.opacity = "0";
-            document.getElementById('FusionSLAM_video').currentTime = "0";
             document.getElementById('FusionSLAM_image').style.opacity = "1";
           }
-    
-          FusionSLAM_stop();
+  
+          function FusionSLAM_stop() {
+            document.getElementById('FusionSLAM_image').style.opacity = "0";
+          }
+          FusionSLAM_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://github.com/jagennath-hari/FusionSLAM-Unifying-Instant-NGP-for-Monocular-SLAM">
-          <span class="papertitle">FusionSLAM: Unifying Instant NGP for Monocular SLAM</span>
+      <span class="papertitle"> FusionSLAM: Unifying Instant NGP for Monocular SLAM </span>
         </a>
         <br>
         <strong>J. Hari</strong>
         <br>
-        <em>Github</em>, 2023 &nbsp;
+        <em>Github</em>, 2023 &nbsp
         <br>
         <a href="https://github.com/jagennath-hari/FusionSLAM-Unifying-Instant-NGP-for-Monocular-SLAM">Project Page</a>
         <p></p>
@@ -430,48 +331,34 @@
       </td>
     </tr>
 
-    <tr style="height: 180px;" onmouseover="MultiSLAM_start()" onmouseout="MultiSLAM_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;"> <!-- Red border for debugging -->
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="MultiSLAM_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/MultiSLAM.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="MultiSLAM_image" src="images/MultiSLAM.png"
-               style="position: absolute; top: -70px; left: 0; width: 100%; height: 320px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="MultiSLAM_stop()" onmouseover="MultiSLAM_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='MultiSLAM_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/MultiSLAM.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/MultiSLAM.png' width="160">
         </div>
-    
-        <!-- Hover Script -->
         <script type="text/javascript">
           function MultiSLAM_start() {
-            document.getElementById('MultiSLAM_video').style.opacity = "1";
-            document.getElementById('MultiSLAM_image').style.opacity = "0";
-          }
-    
-          function MultiSLAM_stop() {
-            document.getElementById('MultiSLAM_video').style.opacity = "0";
-            document.getElementById('MultiSLAM_video').currentTime = "0";
             document.getElementById('MultiSLAM_image').style.opacity = "1";
           }
-    
-          MultiSLAM_stop();
+  
+          function MultiSLAM_stop() {
+            document.getElementById('MultiSLAM_image').style.opacity = "0";
+          }
+          MultiSLAM_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://github.com/jagennath-hari/multi-camera-superpoint-SLAM">
-          <span class="papertitle">Real-Time Multi Camera Superpoint SLAM</span>
+      <span class="papertitle"> Real-Time Multi Camera Superpoint SLAM </span>
         </a>
         <br>
         <strong>J. Hari</strong>
         <br>
-        <em>Github</em>, 2023 &nbsp;
+        <em>Github</em>, 2023 &nbsp
         <br>
         <a href="https://github.com/jagennath-hari/multi-camera-superpoint-SLAM">Project Page</a>
         <p></p>
@@ -481,47 +368,34 @@
       </td>
     </tr>
 
-    <tr style="height: 180px;" onmouseover="MSThesis_start()" onmouseout="MSThesis_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="MSThesis_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; z-index: 0;">
-            <source src="images/MSThesis.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="MSThesis_image" src="images/MSThesis.png"
-               style="position: absolute; top: -70px; left: 0; width: 100%; height: 320px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="MSThesis_stop()" onmouseover="MSThesis_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='MSThesis_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/MSThesis.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/MSThesis.png' width="160">
         </div>
-    
         <script type="text/javascript">
           function MSThesis_start() {
-            document.getElementById('MSThesis_video').style.opacity = "1";
-            document.getElementById('MSThesis_image').style.opacity = "0";
-          }
-    
-          function MSThesis_stop() {
-            document.getElementById('MSThesis_video').style.opacity = "0";
-            document.getElementById('MSThesis_video').currentTime = "0";
             document.getElementById('MSThesis_image').style.opacity = "1";
           }
-    
-          MSThesis_stop();
+
+          function MSThesis_stop() {
+            document.getElementById('MSThesis_image').style.opacity = "0";
+          }
+          MSThesis_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://www.proquest.com/docview/2819971182/previewPDF">
-          <span class="papertitle">Creating a Resilient SLAM System for Next-Gen Autonomous Robots</span>
+			<span class="papertitle"> Creating a Resilient SLAM System for Next-Gen Autonomous Robots </span>
         </a>
         <br>
-        <strong>J. Hari</strong>
+				<strong>J. Hari</strong>
         <br>
-        <em>New York University Tandon School of Engineering ProQuest Dissertations & Theses</em>, 2023 &nbsp;
+        <em>New York University Tandon School of Engineering ProQuest Dissertations & Theses</em>, 2023 &nbsp
         <br>
         <a href="https://drive.google.com/file/d/12O5OV4adJSELKL8L_WxspvzUCeg_faqQ/view">Video</a>
         /
@@ -535,54 +409,40 @@
 
 
 
-    <tr style="height: 180px;" onmouseover="EfficientRealLoc_start()" onmouseout="EfficientRealLoc_stop()">
-      <td style="padding: 0; width: 20%; height: 100%;">
-        <div style="position: relative; width: 100%; height: 100%;">
-          <!-- Video Layer -->
-          <video id="EfficientRealLoc_video" muted autoplay loop playsinline
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        object-fit: fill; display: block; opacity: 0; z-index: 0;">
-            <source src="images/EfficientRealLoc.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-    
-          <!-- Image Layer -->
-          <img id="EfficientRealLoc_image" src="images/EfficientRealLoc.png"
-               style="position: absolute; top: -70px; left: 0; width: 100%; height: 320px;
-                      object-fit: fill; display: block; z-index: 1;">
+    <tr onmouseout="EfficientRealLoc_stop()" onmouseover="EfficientRealLoc_start()" >
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='EfficientRealLoc_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/EfficientRealLoc.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/EfficientRealLoc.png' width="160">
         </div>
-    
-        <!-- Hover Script -->
         <script type="text/javascript">
           function EfficientRealLoc_start() {
-            document.getElementById('EfficientRealLoc_video').style.opacity = "1";
-            document.getElementById('EfficientRealLoc_image').style.opacity = "0";
-          }
-    
-          function EfficientRealLoc_stop() {
-            document.getElementById('EfficientRealLoc_video').style.opacity = "0";
-            document.getElementById('EfficientRealLoc_video').currentTime = "0";
             document.getElementById('EfficientRealLoc_image').style.opacity = "1";
           }
-    
-          EfficientRealLoc_stop();
+
+          function EfficientRealLoc_stop() {
+            document.getElementById('EfficientRealLoc_image').style.opacity = "0";
+          }
+          EfficientRealLoc_stop()
         </script>
       </td>
-    
-      <td style="padding: 8px; width: 80%; vertical-align: middle;">
+      <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://ieeexplore.ieee.org/abstract/document/10125919">
-          <span class="papertitle">Efficient Real-Time Localization in Prior Indoor Maps Using Semantic SLAM</span>
+			<span class="papertitle">Efficient Real-Time Localization in Prior Indoor Maps Using Semantic SLAM</span>
         </a>
         <br>
-        <a href="https://raktimgg.github.io/my-website/">R. G. Goswami</a>,
-        <a href="https://github.com/venkataPalacherla">P. V. Amith</a>,
-        <strong>J. Hari</strong>,
+				<a href="https://raktimgg.github.io/my-website/">R. G. Goswami</a>,
+				<a href="https://github.com/venkataPalacherla">P. V. Amith</a>,
+				<strong>J. Hari</strong>,
         <a href="https://www.linkedin.com/in/akanksha-dhaygude/">A. Dhaygude</a>,
-        <a href="https://engineering.nyu.edu/faculty/prashanth-krishnamurthy">P. Krishnamurthy</a>,
+				<a href="https://engineering.nyu.edu/faculty/prashanth-krishnamurthy">P. Krishnamurthy</a>,
         <a href="https://med.nyu.edu/faculty/johnross-rizzo">J. Rizzo</a>,
         <a href="https://engineering.nyu.edu/faculty/farshad-khorrami">F. Khorrami</a>
         <br>
-        <em>International Conference on Automation, Robotics and Applications (ICARA)</em>, 2023 &nbsp;
+        <em>International Conference on Automation, Robotics and Applications (ICARA)</em>, 2023 &nbsp
         <br>
         <a href="https://www.youtube.com/watch?v=w2oysS12-N8">Video</a>
         /
@@ -593,7 +453,6 @@
         </p>
       </td>
     </tr>
-    
 
 
           </tbody></table>
