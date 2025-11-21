@@ -23,10 +23,10 @@
                 <p class="name" style="text-align: center;">
                   Jagennath Hari
                 </p>
-                <p>I'm a software engineer at <a href="https://www.laudando.com/">L&A</a> in San Francisco, where I work on computer vision and robotics.
+                <p>I'm a software engineer at <a href="https://omniinstrument.com/">Omni Instrument</a> in San Francisco, where I work on computer vision and robotics for manufacturing.
                 </p>
                 <p>
-                  At L&A I've worked on <a href="https://www.laudando.com/world-s-first-laser-weeder-trimmer">L&Aser™</a> and <a href="https://www.laudando.com/agception">AgCeption™</a>.    &nbsp;I did my Masters at <a href="https://engineering.nyu.edu/">New York University</a>, where I was advised by <a href="https://engineering.nyu.edu/faculty/farshad-khorrami">Farshad Khorrami</a>. I like to build robotic systems.
+                  Prevoiusly at <a href="https://www.laudando.com/">L&A</a> I've worked on <a href="https://www.laudando.com/world-s-first-laser-weeder-trimmer">L&Aser™</a> and <a href="https://www.laudando.com/agception">AgCeption™</a>.    &nbsp;I did my Masters at <a href="https://engineering.nyu.edu/">New York University</a>, where I was advised by <a href="https://engineering.nyu.edu/faculty/farshad-khorrami">Farshad Khorrami</a>. I like to build robotic systems.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:jh7454@nyu.edu">Email</a> &nbsp;/&nbsp;
@@ -53,6 +53,48 @@
           </tbody></table>
     <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+      <tr onmouseout="Singularity3D_stop()" onmouseover="Singularity3D_start()" >
+        <td style="padding:16px;width:20%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id="Singularity3D_image"
+                style="width:160px; height:90px; padding-top:35px; overflow:hidden;">
+              <video muted autoplay loop
+                    style="width:100%; height:100%; object-fit:cover;">
+                <source src="images/Singularity3D.mp4" type="video/mp4">
+              </video>
+            </div>
+
+            <img src='images/Singularity3D.png'
+                width="160" height="90"
+                style="padding-top:35px;">
+          </div>
+          <script type="text/javascript">
+            function Singularity3D_start() {
+              document.getElementById('Singularity3D_image').style.opacity = "1";
+            }
+    
+            function Singularity3D_stop() {
+              document.getElementById('Singularity3D_image').style.opacity = "0";
+            }
+            Singularity3D_stop()
+          </script>
+        </td>
+        <td style="padding:8px;width:80%;vertical-align:middle">
+          <a href="https://github.com/jagennath-hari/Singularity3D">
+        <span class="papertitle"> Singularity3D: World Synthesis with Spherical SfM and Feature 3DGS </span>
+          </a>
+          <br>
+          <strong>J. Hari</strong>
+          <br>
+          <em>Github</em>, 2025 &nbsp
+          <br>
+          <a href="https://github.com/jagennath-hari/Singularity3D">Project Page</a>
+          <p></p>
+          <p>
+            Single-image world synthesis using a generative panorama prior, orbit-conditioned spherical SfM, and Semantic 3D Gaussian scene reconstruction. 
+          </p>
+        </td>
+      </tr>
 
 
       <tr onmouseout="SpatialFusion_stop()" onmouseover="SpatialFusion_start()" >
